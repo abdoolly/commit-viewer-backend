@@ -1,7 +1,7 @@
-# ES2 Easy Secure Storage
+# Commit viewer backend
 
-A project in which it mainly has 2 apis that allow a user to save data in storage
-securely and decrypt it given encryption key and give decryption key to decrypt
+A system to allow to query the github api commits 
+and check for a repository availability publicly
 
 ## Installation
 to be able to install the system and use it please follow the steps below
@@ -37,56 +37,12 @@ then you can fill in the values by your desired values below is an example `.env
 
 ```
 NODE_ENV=development
-secretKey=AnySecretKeyUsedInappEncryption
-
-DB_HOST=localhost
-DB_NAME=secure-storage-db
-DB_USER=postgres
-DB_PORT=5432
-DB_PASSWORD=testPassword
+GITHUB_USERNAME=
+GITHUB_TOKEN=
+GITHUB_URL=https://api.github.com
 ```
 
 now your environment configs are ready
-
-#### Now getting the database server up
-
-then you may start the database server and the adminer (which is a UI for postgres db something phpmyadmin)
-
-to start the main system depencies run the below commands
-
-```
-yarn start-db
-or 
-npm run start-db
-```
-
-after that you can open this link [http://localhost:8080/](http://localhost:8080/) in the browser which will open the adminer.
-
-you can login with the below creds or according to the configs you made in the `.env` file
-
-```
-System : PostgreSQL
-Server : db-service (this is the name of the db service in the docker-compose file)
-Username: postgres
-Password: <enter the password in the DB_PASSWORD you entered in the .env file>
-```
-
-then click login 
-you will see a link to create a database you just need to create a database and
-do not forget to name it as you named it in the `.env` file which `DB_NAME`
-
-#### running migration
-
-last step before getting up our server we just need to make our database tables
-run this command to migrate
-
-```
-yarn migrate
-or 
-npm run migrate
-```
-
-this should work and you can check back in the adminer for the table which will be called `storage`.
 
 #### Running the server 
 
