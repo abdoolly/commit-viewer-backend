@@ -1,0 +1,31 @@
+{
+    "roots": [
+        "<rootDir>/src"
+    ],
+    "testMatch": [
+        "**/__tests__/**/*.+(ts|tsx|js)",
+        "**/?(*.)+(spec|test).+(ts|tsx|js)"
+    ],
+    "transform": {
+        "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "testPathIgnorePatterns": [
+        "build/"
+    ],
+    "testEnvironment": "node",
+    "moduleFileExtensions": [
+        "ts",
+        "js",
+        "json"
+    ],
+    "coveragePathIgnorePatterns": [
+        "build/",
+        "src/bin/",
+        "src/config/",
+        "src/app.ts",
+        "src/models/"
+    ],
+    "collectCoverageFrom": [
+        "src/**/*.ts"
+    ]
+}
