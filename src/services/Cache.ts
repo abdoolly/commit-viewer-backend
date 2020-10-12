@@ -12,7 +12,7 @@ export class Cache {
 
     get(key: string): any {
         if (!this.exists(key))
-            throw Error(`key ${key} does not exist in cache`);
+            throw new Error(`key ${key} does not exist in cache`);
 
         return this.cache[key];
     }
