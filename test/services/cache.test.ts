@@ -1,4 +1,4 @@
-import { Cache } from '../../services/Cache';
+import { Cache } from '../../src/services/Cache';
 
 describe('Cache storage', () => {
 
