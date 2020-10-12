@@ -1,6 +1,7 @@
 {
     "roots": [
-        "<rootDir>/"
+        "<rootDir>/",
+        "<rootDir>/test/"
     ],
     "testMatch": [
         "**/__tests__/**/*.+(ts|tsx|js)",
