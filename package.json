@@ -5,7 +5,7 @@
     "dev": "nodemon ./build/bin/www",
     "watch": "tsc --watch",
     "build": "tsc",
-    "start": "yarn build && node ./build/bin/www",
+    "start": "node ./build/bin/www",
     "build:run": "yarn build && yarn start",
     "test": "jest --config jest.config.json",
     "test:coverage": "jest --coverage --config jest.config.json",
