@@ -4,7 +4,6 @@ import express, { NextFunction, Request, Response } from 'express';
 import indexRouter from './modules/git-caller/git-caller.api';
 import { handleAxiosError } from './modules/git-caller/git-caller.service';
 require('express-async-errors');
-require('./config/db');
 
 const app = express();
 app.use(express.json());
